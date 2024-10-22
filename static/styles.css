@@ -1,0 +1,62 @@
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(207, 165, 165);
+}
+
+.content {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #d5c8c8;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.content h1 {
+  color: #137513;
+}
+.content h4 {
+  color: #333;
+}
+.content table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+.content table th, .content table td {
+  padding: 10px;
+  border: 1px solid #3a2d2d;
+}
+.content table th th, .content table td th {
+  background-color: #c84e4e;
+  color: #333;
+}
+.content a {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 20px;
+  background-color: rgba(14, 97, 136, 0.5764705882);
+  color: #000000;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.content a:hover {
+  background-color: #137513;
+}
+.content input {
+  padding: 10px;
+  margin: 5px;
+  border: solid 1px;
+  border-radius: 5px;
+}
+.content #btn_add {
+  background-color: #282828;
+  color: #fff;
+  cursor: pointer;
+}
+.content #btn_add:hover {
+  background-color: #0b890b;
+}/*# sourceMappingURL=styles.css.map */

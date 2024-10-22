@@ -1,0 +1,78 @@
+// color Variables
+
+    $primary_color: #0e618893;
+    $primary-hover-color: #137513;
+    $success-color: #282828;
+    $success-hover-color: #0b890b;
+    $title-color: #333;
+
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(207, 165, 165) ;
+}
+ 
+.content{
+    max-width: 800px;
+    margin: 50px auto;  
+    padding: 20px;
+    background-color: #d5c8c8;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    h1{
+        color:$primary-hover-color;
+    }
+    h4{
+        color: $title-color;
+    }
+    table{
+        width:100%;
+        margin-top: 20px;
+        border-collapse:collapse;
+
+        th,td{
+            padding: 10px;
+            border: 1px solid #3a2d2d;
+
+            th{
+                background-color: #c84e4e ;
+                color: #333;
+            }
+        }
+    }
+
+    a{
+        display: inline-block;
+        padding: 8px 16px;
+        margin: 5px;
+        border-radius: 20px;
+        background-color: $primary_color;
+        color: #000000;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+
+
+        &:hover{
+            background-color: $primary-hover-color;
+
+        }
+    }
+    input{
+        padding: 10px;
+        margin: 5px;
+        border: solid 1px;
+        border-radius: 5px;
+    }
+    #btn_add{
+        background-color: $success-color;
+        color: #fff;
+        cursor: pointer;
+        &:hover{
+            background-color: $success-hover-color;
+        }
+    }
+
+}

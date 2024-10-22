@@ -1,0 +1,64 @@
+
+   {% extends "base.html" %}
+   {% block head %}
+
+   <title> Task Smash </title>
+   {% endblock %}
+   
+   {% block body %}
+   <div class="content">
+
+    <h1>Task Smash 3.0</h1>
+    {% if tasks | length < 1 %}
+    <h3> There are no tasks... Create one here! </h3>
+    {% else %}
+
+
+    <!-- <tr> tag :  a table row. Each row contains data or header cells.
+        In this case, there are two rows: one for the header and one for the data.
+
+        <th> (Table Header): defines a header cell. It is bold and centered by default.
+            <td> (Table Data): the <td> tag defines a standard data cell within a table.    
+    -->
+    <table>
+        <tr>
+            <th> Task</th>
+            <th> Added</th>
+            <th> Action</th>
+        </tr>
+        {% for task in tasks %}
+
+            <tr>
+                <td> {{task.content}} </td>
+                <td>  {{task.created.strftime('%Y-%m-%d')}}</td>
+                <td> 
+                    <a href="/delete/{{task.id}}">Delete </a>
+                    <br/>
+                    <a href="/edit/{{task.id}}">Edit </a>
+
+                </td>
+            </tr>
+        {% endfor %}
+
+    </table>
+    {% endif %}
+
+    <!-- <form action=""> : This attribute specifies the URL where the form data should be sent.
+
+     name="Content" : This attribute defines the name of the form data when it is submitted, which will be sent as Content.
+
+     id="Content": This gives the input field a unique ID, which can be referenced by JavaScript or CSS.
+     type="submit" : This makes it a submit button that triggers the form submission.
+     value="Add Task" : This sets the label of the button to display "Add Task" to the user.
+     id="btn_add" : This provides a unique ID for the submit button, which can be referenced in JavaScript or CSS.
+    -->
+    <form action="/" method="POST">
+        <input type="text" name="content" id="content" />
+        <input type="Submit" value="Add Task" id="btn_add"/>
+    </form> 
+</div>
+
+ 
+ {% endblock %}
+
+
